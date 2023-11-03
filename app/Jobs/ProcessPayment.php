@@ -9,15 +9,9 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 
-class SendWelcomeEmail implements ShouldQueue
+class ProcessPayment implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-
-    // public $timeout=1;
-
-    // public $tries = -1;
-
-    // public $backoff = 2;
 
     /**
      * Create a new job instance.
@@ -32,13 +26,6 @@ class SendWelcomeEmail implements ShouldQueue
      */
     public function handle(): void
     {
-        // throw new \Exception('Failed');
-        sleep(3);
-        info("Executing");
+        //
     }
-
-    // public function retryUntil()
-    // {
-    //     return now()->addMinute();
-    // }
 }
